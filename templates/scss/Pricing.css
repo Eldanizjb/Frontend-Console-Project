@@ -18,6 +18,8 @@ header .container .row .col-lg-12 .navbar-expand-lg {
   header .container .row .col-lg-12 .navbar-expand-lg .container-fluid {
     width: 70%;
     padding: 0px; }
+    header .container .row .col-lg-12 .navbar-expand-lg .container-fluid .navbar-brand {
+      padding: 0; }
     header .container .row .col-lg-12 .navbar-expand-lg .container-fluid .navbar-collapse {
       justify-content: center;
       font-size: 20px;

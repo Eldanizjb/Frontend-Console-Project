@@ -26,6 +26,10 @@ header .container .row .col-lg-12 .navbar-expand-lg .container-fluid {
   padding: 0px;
 }
 
+header .container .row .col-lg-12 .navbar-expand-lg .container-fluid .navbar-brand {
+  padding: 0;
+}
+
 header .container .row .col-lg-12 .navbar-expand-lg .container-fluid .navbar-collapse {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
