@@ -1,3 +1,10 @@
+window.addEventListener("scroll", (e) => {
+    if (window.pageYOffset > 150) {
+        document.querySelector(".navbar-expand-lg ").classList.add("active");
+    } else {
+        document.querySelector(".navbar-expand-lg ").classList.remove("active");
+    }
+});
 $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 10,

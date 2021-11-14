@@ -1,4 +1,15 @@
+window.addEventListener("scroll", (e) => {
+    if (window.pageYOffset > 150) {
+        document.querySelector(".navbar-expand-lg ").classList.add("active");
+    } else {
+        document.querySelector(".navbar-expand-lg ").classList.remove("active");
+    }
+});
+
+
 // //Header slider//
+
+
 var slideIndex = 0;
 showSlides();
 

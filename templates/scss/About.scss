@@ -13,14 +13,32 @@ header {
     .container {
         .row {
             .col-lg-12 {
+                background-color: white;
                 .navbar-expand-lg {
-                    width: 100%;
                     background-color: transparent;
                     height: auto;
                     z-index: 1040;
-                    padding-top: 5px;
-                    padding-bottom: 5px;
-                    background: none !important;
+                    left: 0;
+                    width: 100%;
+                    top: 0;
+                    transition: all 0.3s linear;
+                    &.active {
+                        position: fixed;
+                        // animation: nav 0.1s linear;
+                        box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.25%);
+                        background-color: white !important;
+                        display: flex;
+                        .btn-outline-secondary {
+                            border-color: #080a3c !important;
+                            color: #080a3c !important;
+                            font-weight: 700;
+                        }
+                    }
+                    &.active {
+                        .navbar-brand {
+                            margin-left: 75px;
+                        }
+                    }
                     .container-fluid {
                         width: 70%;
                         padding: 0px;
@@ -36,8 +54,13 @@ header {
                             font-size: 20px;
                             margin: 0px;
                             .navbar-nav {
+                                height: 80px !important;
+                                vertical-align: middle;
+                                display: flex;
+                                align-content: center;
+                                align-items: center;
                                 .nav-item {
-                                    padding: 0 px 19 px;
+                                    padding: 0px;
                                     display: flex;
                                     margin: 0 12px;
                                     &:hover .nav-link {
@@ -46,21 +69,58 @@ header {
                                     &:hover .dropdown-menu {
                                         display: inline;
                                     }
-                                    .nav-link {}
+                                    .nav-link {
+                                        text-decoration: none;
+                                    }
                                     .dropdown-menu {
-                                        width: 629px;
+                                        border-top: 2px solid #13c4a1;
+                                        border-top-left-radius: 7px;
+                                        border-top-right-radius: 7px;
+                                        width: 568px;
                                         position: absolute;
                                         display: none;
                                         top: 47px;
                                         .nav-item-left-side {
                                             display: inline-block !important;
-                                            h3 {}
-                                            .dropdown-item {}
+                                            h3 {
+                                                text-align: center;
+                                            }
+                                            .dropdown-item {
+                                                color: #4a6f8a;
+                                                line-height: 1.9;
+                                                &::before {
+                                                    content: '';
+                                                    position: absolute;
+                                                    right: 0;
+                                                    width: 260px;
+                                                    height: 0.5px;
+                                                    border: 1px dashed #e2e6e5;
+                                                }
+                                                &:hover {
+                                                    color: #13c4a1 !important;
+                                                }
+                                            }
                                         }
                                         .nav-item-right-side {
                                             display: inline-block;
-                                            h3 {}
-                                            .dropdown-item {}
+                                            h3 {
+                                                text-align: center;
+                                            }
+                                            .dropdown-item {
+                                                line-height: 1.9;
+                                                color: #4a6f8a;
+                                                &::before {
+                                                    content: '';
+                                                    position: absolute;
+                                                    left: 0;
+                                                    width: 260px;
+                                                    height: 0.5px;
+                                                    border: 1px dashed #e2e6e5;
+                                                }
+                                                &:hover {
+                                                    color: #13c4a1 !important;
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -79,7 +139,21 @@ header {
                                             .standart {}
                                             .myStandart {
                                                 .nav-item {
-                                                    .dropdown-item {}
+                                                    .dropdown-item {
+                                                        color: #4a6f8a;
+                                                        line-height: 1.9;
+                                                        &::before {
+                                                            content: '';
+                                                            position: absolute;
+                                                            left: 0;
+                                                            width: 220px;
+                                                            height: 0.5px;
+                                                            border: 1px dashed #e2e6e5;
+                                                        }
+                                                        &:hover {
+                                                            color: #13c4a1 !important;
+                                                        }
+                                                    }
                                                 }
                                             }
                                             &:hover .myStandart {
@@ -87,7 +161,21 @@ header {
                                             }
                                         }
                                         .nav-item {
-                                            .dropdown-item {}
+                                            .dropdown-item {
+                                                color: #4a6f8a;
+                                                line-height: 1.9;
+                                                &::before {
+                                                    content: '';
+                                                    position: absolute;
+                                                    left: 0;
+                                                    width: 220px;
+                                                    height: 0.5px;
+                                                    border: 1px dashed #e2e6e5;
+                                                }
+                                                &:hover {
+                                                    color: #13c4a1 !important;
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -115,17 +203,46 @@ header {
                     background: none !important;
                     width: 100%;
                     margin-right: 0px;
+                    margin-bottom: 0px !important;
                     .container-fluid {
                         margin: 0px !important;
                         .me-2 {
+                            position: relative;
+                            overflow: hidden;
+                            color: white;
+                            background-color: #13c4a1;
+                            -webkit-transition: all 0.5s;
+                            transition: all 0.5s;
+                            border: 1px solid #13c4a1;
                             width: 124px !important;
+                            height: 40px !important;
+                            &:hover {
+                                background-color: #080a3c;
+                            }
                             i {}
                             span {}
                         }
                         .btn-sm {
-                            padding: 9px 0px;
-                            width: 102px !important;
-                            i {}
+                            position: relative;
+                            overflow: hidden;
+                            color: #080a3c;
+                            background-color: transparent;
+                            margin-left: 8px;
+                            -webkit-transition: all 0.5s;
+                            transition: all 0.5s;
+                            border: 1px solid #080a3c;
+                            width: 109px !important;
+                            height: 40px !important;
+                            i {
+                                color: rgb(255, 97, 47);
+                            }
+                            &:hover {
+                                background-color: #080a3c;
+                                color: white;
+                            }
+                            &:hover i {
+                                color: white;
+                            }
                             span {}
                         }
                     }
@@ -1130,11 +1247,6 @@ footer {
         .container {
             .row {
                 .col-lg-4 {
-                    .logFooter {
-                        a {
-                            img {}
-                        }
-                    }
                     p {
                         line-height: 2;
                     }
@@ -1172,7 +1284,6 @@ footer {
                         li {
                             line-height: 2;
                             list-style: none;
-                            a {}
                         }
                     }
                     .sosials {
@@ -1204,10 +1315,15 @@ footer {
                                     line-height: 1;
                                     display: inline-block;
                                     text-transform: none;
-                                    /* -webkit-font-smoothing: antialiased; */
-                                    /* font-family: boxicons !important; */
                                     padding: 8px;
                                 }
+                            }
+                            &:hover {
+                                background-color: white;
+                            }
+                            &:hover a {
+                                background-color: white;
+                                color: rgb(8, 10, 60);
                             }
                         }
                     }
@@ -1221,15 +1337,6 @@ footer {
                         span {
                             color: rgb(255, 97, 47);
                         }
-                    }
-                }
-            }
-        }
-        section {
-            .scroll {
-                .firstscroll {
-                    a {
-                        i {}
                     }
                 }
             }
