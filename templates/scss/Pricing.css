@@ -22,12 +22,14 @@ header .container .row .col-lg-12 {
       box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.25);
       background-color: white !important;
       display: flex; }
-      header .container .row .col-lg-12 .navbar-expand-lg.active .btn-outline-secondary {
-        border-color: #080a3c !important;
-        color: #080a3c !important;
-        font-weight: 700; }
     header .container .row .col-lg-12 .navbar-expand-lg.active .navbar-brand {
       margin-left: 75px; }
+    header .container .row .col-lg-12 .navbar-expand-lg.active .me-2:hover {
+      background-color: #080a3c;
+      color: white !important; }
+    header .container .row .col-lg-12 .navbar-expand-lg.active .btn-sm:hover {
+      background-color: #080a3c;
+      color: white !important; }
     header .container .row .col-lg-12 .navbar-expand-lg .container-fluid {
       width: 70%;
       padding: 0px; }
@@ -57,7 +59,7 @@ header .container .row .col-lg-12 {
               border-top: 2px solid #13c4a1;
               border-top-left-radius: 7px;
               border-top-right-radius: 7px;
-              width: 568px;
+              width: 663px;
               position: absolute;
               display: none;
               top: 47px; }
@@ -128,11 +130,15 @@ header .container .row .col-lg-12 {
       header .container .row .col-lg-12 .navbar-expand-lg .container-fluid .nav-item .nav-link {
         color: #4a6f8a !important; }
   header .container .row .col-lg-12 .bg-light {
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     background: none !important;
     width: 100%;
-    margin-right: 0px;
-    margin-bottom: 0px !important; }
+    margin-right: 0 px !important;
+    margin-bottom: 0 px !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; }
     header .container .row .col-lg-12 .bg-light .container-fluid {
       margin: 0px !important; }
       header .container .row .col-lg-12 .bg-light .container-fluid .me-2 {
@@ -143,7 +149,7 @@ header .container .row .col-lg-12 {
         -webkit-transition: all 0.5s;
         transition: all 0.5s;
         border: 1px solid #13c4a1;
-        width: 124px !important;
+        width: 145px !important;
         height: 40px !important; }
         header .container .row .col-lg-12 .bg-light .container-fluid .me-2:hover {
           background-color: #080a3c; }
@@ -281,41 +287,61 @@ main .sectionEight {
           color: #13c4a1; }
     main .sectionEight .container .item-tab .row .col-lg-4 .card-price .container-fluid {
       text-align: center !important; }
+      main .sectionEight .container .item-tab .row .col-lg-4 .card-price .container-fluid .btn-outline-success {
+        position: relative;
+        overflow: hidden;
+        color: white;
+        background-color: #13c4a1;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        border: 1px solid #13c4a1;
+        width: 145px !important;
+        height: 40px !important; }
+        main .sectionEight .container .item-tab .row .col-lg-4 .card-price .container-fluid .btn-outline-success:hover {
+          background-color: #080a3c; }
   main .sectionEight .container .active {
     display: block; }
   main .sectionEight .container .active1 {
     display: block; }
 main .sectionEleven {
-  background: #eee; }
+  background: #eee;
+  height: 450px; }
   main .sectionEleven .container .row .col-lg-6 h2 {
     color: #080a3c; }
     main .sectionEleven .container .row .col-lg-6 h2 span {
       color: #ff612f; }
-  main .sectionEleven .container .row .col-lg-6 .demo {
+  main .sectionEleven .container .row .col-lg-6 .accordion {
+    background-color: white;
+    margin-top: 15px;
+    color: #444;
+    cursor: pointer;
+    padding: 25px;
+    padding-top: 1px !important;
     width: 100%;
-    padding-top: 60px;
-    padding-bottom: 60px; }
-    main .sectionEleven .container .row .col-lg-6 .demo .panel-group {
-      border-radius: 0;
-      box-shadow: none;
-      border-color: #EEEEEE; }
-      main .sectionEleven .container .row .col-lg-6 .demo .panel-group .panel-default .panel-heading {
-        padding: 0;
-        border-radius: 0;
-        color: #212121;
-        background-color: #FAFAFA;
-        border-color: #EEEEEE; }
-        main .sectionEleven .container .row .col-lg-6 .demo .panel-group .panel-default .panel-heading .panel-title {
-          font-size: 14px; }
-          main .sectionEleven .container .row .col-lg-6 .demo .panel-group .panel-default .panel-heading .panel-title a {
-            display: block;
-            padding: 15px;
-            text-decoration: none; }
-            main .sectionEleven .container .row .col-lg-6 .demo .panel-group .panel-default .panel-heading .panel-title a .more-less {
-              float: right;
-              color: #212121; }
-      main .sectionEleven .container .row .col-lg-6 .demo .panel-group .panel-default .panel-collapse .panel-body {
-        border-top-color: #EEEEEE; }
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s; }
+    main .sectionEleven .container .row .col-lg-6 .accordion:hover {
+      background-color: #ccc; }
+    main .sectionEleven .container .row .col-lg-6 .accordion::after {
+      content: '\002B';
+      color: #777;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px; }
+  main .sectionEleven .container .row .col-lg-6 .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin: 0px 0 -3px 0px; }
+  main .sectionEleven .container .row .col-lg-6 .active:after {
+    content: "\2212"; }
+  main .sectionEleven .container .row .col-lg-6 .active:hover {
+    background-color: #ccc; }
   main .sectionEleven .container .row .col-lg-6 img {
     max-width: 100%;
     height: 100%; }
@@ -388,6 +414,18 @@ main .sectionThirteen {
         font-size: 15px; }
       main .sectionThirteen .backgroundThirteen .container .row .col-lg-12 .container-fluid {
         padding-bottom: 80px; }
+        main .sectionThirteen .backgroundThirteen .container .row .col-lg-12 .container-fluid .btn {
+          position: relative;
+          overflow: hidden;
+          color: white;
+          background-color: #13c4a1;
+          -webkit-transition: all 0.5s;
+          transition: all 0.5s;
+          border: 1px solid #13c4a1;
+          width: 145px !important;
+          height: 40px !important; }
+          main .sectionThirteen .backgroundThirteen .container .row .col-lg-12 .container-fluid .btn:hover {
+            background-color: #080a3c; }
       main .sectionThirteen .backgroundThirteen .container .row .col-lg-12 .shares .share1 {
         position: absolute;
         top: 10px;

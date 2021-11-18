@@ -22,12 +22,14 @@ header .container .row .col-lg-12 {
       box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.25);
       background-color: white !important;
       display: flex; }
-      header .container .row .col-lg-12 .navbar-expand-lg.active .btn-outline-secondary {
-        border-color: #080a3c !important;
-        color: #080a3c !important;
-        font-weight: 700; }
     header .container .row .col-lg-12 .navbar-expand-lg.active .navbar-brand {
       margin-left: 75px; }
+    header .container .row .col-lg-12 .navbar-expand-lg.active .me-2:hover {
+      background-color: #080a3c;
+      color: white !important; }
+    header .container .row .col-lg-12 .navbar-expand-lg.active .btn-sm:hover {
+      background-color: #080a3c;
+      color: white !important; }
     header .container .row .col-lg-12 .navbar-expand-lg .container-fluid {
       width: 70%;
       padding: 0px; }
@@ -57,7 +59,7 @@ header .container .row .col-lg-12 {
               border-top: 2px solid #13c4a1;
               border-top-left-radius: 7px;
               border-top-right-radius: 7px;
-              width: 568px;
+              width: 663px;
               position: absolute;
               display: none;
               top: 47px; }
@@ -128,11 +130,15 @@ header .container .row .col-lg-12 {
       header .container .row .col-lg-12 .navbar-expand-lg .container-fluid .nav-item .nav-link {
         color: #4a6f8a !important; }
   header .container .row .col-lg-12 .bg-light {
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     background: none !important;
     width: 100%;
-    margin-right: 0px;
-    margin-bottom: 0px !important; }
+    margin-right: 0 px !important;
+    margin-bottom: 0 px !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; }
     header .container .row .col-lg-12 .bg-light .container-fluid {
       margin: 0px !important; }
       header .container .row .col-lg-12 .bg-light .container-fluid .me-2 {
@@ -143,7 +149,7 @@ header .container .row .col-lg-12 {
         -webkit-transition: all 0.5s;
         transition: all 0.5s;
         border: 1px solid #13c4a1;
-        width: 124px !important;
+        width: 145px !important;
         height: 40px !important; }
         header .container .row .col-lg-12 .bg-light .container-fluid .me-2:hover {
           background-color: #080a3c; }
@@ -549,6 +555,18 @@ header .container .row .col-lg-12 {
       font-size: 15px; }
   .sectionSeven .container .row .col-lg-12 .forbackground .container .row .col-lg-12 .container-fluid {
     width: 20%; }
+    .sectionSeven .container .row .col-lg-12 .forbackground .container .row .col-lg-12 .container-fluid .me-2 {
+      position: relative;
+      overflow: hidden;
+      color: white;
+      background-color: #13c4a1;
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s;
+      border: 1px solid #13c4a1;
+      width: 145px !important;
+      height: 40px !important; }
+      .sectionSeven .container .row .col-lg-12 .forbackground .container .row .col-lg-12 .container-fluid .me-2:hover {
+        background-color: #080a3c; }
 
 .sectionNine .container .row .col-lg-12 h1 {
   width: 500px; }
@@ -732,8 +750,8 @@ header .container .row .col-lg-12 {
         margin-top: 28px;
         text-align: center; }
         .sectionTwelve .container .row .col-lg-12 .owl-carousel .item .row .col-lg-4 img {
-          position: absolute;
-          top: -41%;
+          position: relative;
+          top: -78px;
           left: -7%;
           width: 100%;
           padding: 5px; }
@@ -800,6 +818,18 @@ header .container .row .col-lg-12 {
       font-size: 15px; }
     .sectionThirteen .backgroundThirteen .container .row .col-lg-12 .container-fluid {
       padding-bottom: 80px; }
+      .sectionThirteen .backgroundThirteen .container .row .col-lg-12 .container-fluid .btn {
+        position: relative;
+        overflow: hidden;
+        color: white;
+        background-color: #13c4a1;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        border: 1px solid #13c4a1;
+        width: 145px !important;
+        height: 40px !important; }
+        .sectionThirteen .backgroundThirteen .container .row .col-lg-12 .container-fluid .btn:hover {
+          background-color: #080a3c; }
     .sectionThirteen .backgroundThirteen .container .row .col-lg-12 .shares .share1 {
       position: absolute;
       top: 10px;

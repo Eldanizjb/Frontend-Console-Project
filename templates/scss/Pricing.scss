@@ -29,15 +29,24 @@ header {
                         box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.25%);
                         background-color: white !important;
                         display: flex;
-                        .btn-outline-secondary {
-                            border-color: #080a3c !important;
-                            color: #080a3c !important;
-                            font-weight: 700;
-                        }
                     }
                     &.active {
                         .navbar-brand {
                             margin-left: 75px;
+                        }
+                    }
+                    &.active {
+                        .me-2 {
+                            &:hover {
+                                background-color: #080a3c;
+                                color: white !important;
+                            }
+                        }
+                        .btn-sm {
+                            &:hover {
+                                background-color: #080a3c;
+                                color: white !important;
+                            }
                         }
                     }
                     .container-fluid {
@@ -77,7 +86,7 @@ header {
                                         border-top: 2px solid #13c4a1;
                                         border-top-left-radius: 7px;
                                         border-top-right-radius: 7px;
-                                        width: 568px;
+                                        width: 663px;
                                         position: absolute;
                                         display: none;
                                         top: 47px;
@@ -200,11 +209,15 @@ header {
                     }
                 }
                 .bg-light {
-                    justify-content: flex-end;
+                    -webkit-box-pack: end;
+                    -ms-flex-pack: end;
                     background: none !important;
                     width: 100%;
-                    margin-right: 0px;
-                    margin-bottom: 0px !important;
+                    margin-right: 0 px !important;
+                    margin-bottom: 0 px !important;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
                     .container-fluid {
                         margin: 0px !important;
                         .me-2 {
@@ -215,7 +228,7 @@ header {
                             -webkit-transition: all 0.5s;
                             transition: all 0.5s;
                             border: 1px solid #13c4a1;
-                            width: 124px !important;
+                            width: 145px !important;
                             height: 40px !important;
                             &:hover {
                                 background-color: #080a3c;
@@ -410,7 +423,20 @@ main {
                             }
                             .container-fluid {
                                 text-align: center !important;
-                                .btn-outline-success {}
+                                .btn-outline-success {
+                                    position: relative;
+                                    overflow: hidden;
+                                    color: white;
+                                    background-color: #13c4a1;
+                                    -webkit-transition: all 0.5s;
+                                    transition: all 0.5s;
+                                    border: 1px solid #13c4a1;
+                                    width: 145px !important;
+                                    height: 40px !important;
+                                    &:hover {
+                                        background-color: #080a3c;
+                                    }
+                                }
                             }
                         }
                     }
@@ -426,6 +452,7 @@ main {
     }
     .sectionEleven {
         background: #eee;
+        height: 450px;
         .container {
             .row {
                 .col-lg-6 {
@@ -435,40 +462,44 @@ main {
                             color: rgb(255, 97, 47);
                         }
                     }
-                    .demo {
+                    .accordion {
+                        background-color: white;
+                        margin-top: 15px;
+                        color: #444;
+                        cursor: pointer;
+                        padding: 25px;
+                        padding-top: 1px !important;
                         width: 100%;
-                        padding-top: 60px;
-                        padding-bottom: 60px;
-                        .panel-group {
-                            border-radius: 0;
-                            box-shadow: none;
-                            border-color: #EEEEEE;
-                            .panel-default {
-                                .panel-heading {
-                                    padding: 0;
-                                    border-radius: 0;
-                                    color: #212121;
-                                    background-color: #FAFAFA;
-                                    border-color: #EEEEEE;
-                                    .panel-title {
-                                        font-size: 14px;
-                                        a {
-                                            display: block;
-                                            padding: 15px;
-                                            text-decoration: none;
-                                            .more-less {
-                                                float: right;
-                                                color: #212121;
-                                            }
-                                        }
-                                    }
-                                }
-                                .panel-collapse {
-                                    .panel-body {
-                                        border-top-color: #EEEEEE;
-                                    }
-                                }
-                            }
+                        border: none;
+                        text-align: left;
+                        outline: none;
+                        font-size: 15px;
+                        transition: 0.4s;
+                        &:hover {
+                            background-color: #ccc;
+                        }
+                        &::after {
+                            content: '\002B';
+                            color: #777;
+                            font-weight: bold;
+                            float: right;
+                            margin-left: 5px;
+                        }
+                    }
+                    .panel {
+                        padding: 0 18px;
+                        background-color: white;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.2s ease-out;
+                        margin: 0px 0 -3px 0px;
+                    }
+                    .active {
+                        &:after {
+                            content: "\2212";
+                        }
+                        &:hover {
+                            background-color: #ccc;
                         }
                     }
                 }
@@ -566,7 +597,20 @@ main {
                         }
                         .container-fluid {
                             padding-bottom: 80px;
-                            .btn {}
+                            .btn {
+                                position: relative;
+                                overflow: hidden;
+                                color: white;
+                                background-color: #13c4a1;
+                                -webkit-transition: all 0.5s;
+                                transition: all 0.5s;
+                                border: 1px solid #13c4a1;
+                                width: 145px !important;
+                                height: 40px !important;
+                                &:hover {
+                                    background-color: #080a3c;
+                                }
+                            }
                         }
                         .shares {
                             .share1 {

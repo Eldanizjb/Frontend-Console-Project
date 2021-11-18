@@ -37,26 +37,6 @@ function toggleIcon(e) {
 $('.panel-group').on('hidden.bs.collapse', toggleIcon);
 $('.panel-group').on('shown.bs.collapse', toggleIcon);
 
-$('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: false,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: false,
-    dots: true,
-    responsive: {
-        0: {
-            items: 1
-        },
-        600: {
-            items: 3
-        },
-        1000: {
-            items: 2
-        }
-    }
-})
 
 let Counter = (element, stepParam, countParam, speed) => {
     let i = 0;
@@ -80,14 +60,20 @@ let Counter = (element, stepParam, countParam, speed) => {
     }, speed);
 }
 
-let counterElement = document.querySelector(".counter");
-Counter(counterElement, 10, 850, 10);
 
-let counterElement2 = document.querySelector(".counter2");
-Counter(counterElement2, 10, 850, 10);
 
-let counterElement3 = document.querySelector(".counter3");
-Counter(counterElement3, 50, 120, 30);
 
-let counterElement4 = document.querySelector(".counter4");
-Counter(counterElement4, 60, 50, 60);
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+}

@@ -28,10 +28,19 @@ header {
                         box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.25%);
                         background-color: white !important;
                         display: flex;
-                        .btn-outline-secondary {
-                            border-color: #080a3c !important;
-                            color: #080a3c !important;
-                            font-weight: 700;
+                    }
+                    &.active {
+                        .me-2 {
+                            &:hover {
+                                background-color: #080a3c;
+                                color: white !important;
+                            }
+                        }
+                        .btn-sm {
+                            &:hover {
+                                background-color: #080a3c;
+                                color: white !important;
+                            }
                         }
                     }
                     &.active {
@@ -76,7 +85,7 @@ header {
                                         border-top: 2px solid #13c4a1;
                                         border-top-left-radius: 7px;
                                         border-top-right-radius: 7px;
-                                        width: 568px;
+                                        width: 663px;
                                         position: absolute;
                                         display: none;
                                         top: 47px;
@@ -199,11 +208,15 @@ header {
                     }
                 }
                 .bg-light {
-                    justify-content: flex-end;
+                    -webkit-box-pack: end;
+                    -ms-flex-pack: end;
                     background: none !important;
                     width: 100%;
-                    margin-right: 0px;
-                    margin-bottom: 0px !important;
+                    margin-right: 0 px !important;
+                    margin-bottom: 0 px !important;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
                     .container-fluid {
                         margin: 0px !important;
                         .me-2 {
@@ -214,7 +227,7 @@ header {
                             -webkit-transition: all 0.5s;
                             transition: all 0.5s;
                             border: 1px solid #13c4a1;
-                            width: 124px !important;
+                            width: 145px !important;
                             height: 40px !important;
                             &:hover {
                                 background-color: #080a3c;
@@ -772,7 +785,20 @@ main {
                                 }
                                 .container-fluid {
                                     width: 20%;
-                                    .me-2 {}
+                                    .me-2 {
+                                        position: relative;
+                                        overflow: hidden;
+                                        color: white;
+                                        background-color: #13c4a1;
+                                        -webkit-transition: all 0.5s;
+                                        transition: all 0.5s;
+                                        border: 1px solid #13c4a1;
+                                        width: 145px !important;
+                                        height: 40px !important;
+                                        &:hover {
+                                            background-color: #080a3c;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -915,7 +941,20 @@ main {
                             }
                             .container-fluid {
                                 text-align: center !important;
-                                .btn-outline-success {}
+                                .btn-outline-success {
+                                    position: relative;
+                                    overflow: hidden;
+                                    color: white;
+                                    background-color: #13c4a1;
+                                    -webkit-transition: all 0.5s;
+                                    transition: all 0.5s;
+                                    border: 1px solid #13c4a1;
+                                    width: 145px !important;
+                                    height: 40px !important;
+                                    &:hover {
+                                        background-color: #080a3c;
+                                    }
+                                }
                             }
                         }
                     }
@@ -1246,8 +1285,8 @@ main {
                                     margin-top: 28px;
                                     text-align: center;
                                     img {
-                                        position: absolute;
-                                        top: -41%;
+                                        position: relative;
+                                        top: -78px;
                                         left: -7%;
                                         width: 100%;
                                         padding: 5px;
@@ -1399,10 +1438,20 @@ main {
                                 align-content: center;
                                 .btn-primary {
                                     margin-left: 0;
-                                    width: 150px !important;
+                                    width: 145px !important;
                                     height: 50px !important;
                                     position: absolute;
                                     right: -89px;
+                                    position: relative;
+                                    overflow: hidden;
+                                    color: white;
+                                    background-color: #13c4a1;
+                                    -webkit-transition: all 0.5s;
+                                    transition: all 0.5s;
+                                    border: 1px solid #13c4a1;
+                                    &:hover {
+                                        background-color: #080a3c;
+                                    }
                                 }
                             }
                         }
